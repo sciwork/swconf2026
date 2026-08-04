@@ -82,7 +82,10 @@ const Hero = () => {
                 )}
                 <div className="tw:max-w-2xl tw:space-y-3 tw:text-neutral-900">
                   <p className="tw:font-yk tw:text-2xl tw:font-semibold tw:tracking-normal tw:tablet:text-3xl">
-                    Coming in early December
+                    December 5, 2026
+                  </p>
+                  <p className="tw:font-yk tw:text-lg tw:font-semibold tw:tracking-normal tw:tablet:text-xl">
+                    NTUT Pioneer International R&D Building, Room 402 & 403
                   </p>
                   {isCfpOpen ? (
                     <>
