@@ -47,11 +47,6 @@ export async function generateMetadata() {
           width: 512,
           height: 512,
         },
-        {
-          url: "/meta_tag_image-192x192.webp",
-          width: 192,
-          height: 192,
-        },
       ],
       locale: "en_US",
       type: "website",
@@ -65,11 +60,6 @@ export async function generateMetadata() {
           url: "/meta_tag_image-512x512.webp",
           width: 512,
           height: 512,
-        },
-        {
-          url: "/meta_tag_image-192x192.webp",
-          width: 192,
-          height: 192,
         },
       ],
     },
