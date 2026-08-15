@@ -43,9 +43,14 @@ export async function generateMetadata() {
       siteName: "sciwork conference 2026",
       images: [
         {
-          url: "/android-chrome-512x512.webp",
+          url: "/meta_tag_image-512x512.webp",
           width: 512,
           height: 512,
+        },
+        {
+          url: "/meta_tag_image-192x192.webp",
+          width: 192,
+          height: 192,
         },
       ],
       locale: "en_US",
@@ -57,9 +62,14 @@ export async function generateMetadata() {
       description: "science, code, and open source.",
       images: [
         {
-          url: "/android-chrome-512x512.webp",
+          url: "/meta_tag_image-512x512.webp",
           width: 512,
           height: 512,
+        },
+        {
+          url: "/meta_tag_image-192x192.webp",
+          width: 192,
+          height: 192,
         },
       ],
     },
