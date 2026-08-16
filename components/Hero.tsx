@@ -31,7 +31,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="tw:w-screen tw:bg-gradient-to-b tw:from-orange-200 tw:via-sky-50 tw:to-white">
+    <div className="tw:w-screen tw:bg-linear-to-b tw:from-orange-300/95 tw:via-sky-300/30 tw:to-white">
       <div className="tw:w-full">
         <div className="tw:flex tw:h-full tw:w-full tw:flex-col tw:items-center tw:px-8 tw:pt-5 tw:lg:pt-20">
           <div className="tw:w-full tw:rounded-md tw:border-x-2 tw:border-t-2 tw:border-none tw:border-white tw:tablet:border-solid">
