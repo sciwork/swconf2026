@@ -9,5 +9,7 @@ export const CFP_URL = "https://pretalx.sciwork.dev/sw26/submit";
 // every visitor regardless of their own time zone.
 export const CFP_OPEN_AT = "2026-08-01T00:00:00+08:00";
 export const CFP_DEADLINE = "2026-09-16T23:59:59+08:00";
+export const TICKET_URL = "https://sciwork.kktix.cc/events/conference2026";
+export const TICKET_OPEN_AT = "2026-10-01T00:00:00+08:00";
 export type CookieConsentValue = "accepted" | "rejected" | undefined;
 export const COOKIE_NAME = "cookieConsent";
