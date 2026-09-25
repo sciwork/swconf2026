@@ -79,7 +79,7 @@ const Hero = () => {
                     NTUT Pioneer International R&D Building, Room 402 & 403
                   </p>
                   <p className="tw:text-base tw:leading-7 tw:tablet:text-lg">
-                    The call for proposals closed on September 15. Proposal
+                    The call for proposals closed on September 16. Proposal
                     review runs from September 17 to October 8.
                   </p>
                   <p className="tw:text-base tw:leading-7 tw:tablet:text-lg">
