@@ -12,13 +12,13 @@ const TalkInfoCard = ({ className, variant, talk, ...props }: Props) => {
   const durationInMinutes = talk.end.diff(talk.start, "minute");
   const shouldShowMoreButton =
     talk.type === "Talk" || talk.type === "Workshop";
-  const shouldShowAbstract = talk.type !== "Non-talk";
+  const shouldShowAbstract = talk.type !== "Non-Talk";
 
   return (
     <div
       className={clsx(
         "tw:rounded-3xl tw:bg-gradient-to-b tw:p-8 tw:tablet:rounded-2xl",
-        variant === "Non-talk" && "tw:from-red-200 tw:to-red-100",
+        variant === "Non-Talk" && "tw:from-red-200 tw:to-red-100",
         variant === "Talk" && "tw:from-indigo-200 tw:to-indigo-100",
         variant === "Workshop" && "tw:from-purple-200 tw:to-purple-100",
         variant === "Sprint" && "tw:from-pink-200 tw:to-pink-100",
@@ -31,7 +31,7 @@ const TalkInfoCard = ({ className, variant, talk, ...props }: Props) => {
           <div
             className={clsx(
               "tw:font-yk tw:text-2xl tw:font-medium",
-              variant === "Non-talk" && "tw:text-rose-800",
+              variant === "Non-Talk" && "tw:text-rose-800",
               variant === "Talk" && "tw:text-indigo-800",
               variant === "Workshop" && "tw:text-purple-800",
               variant === "Sprint" && "tw:text-pink-800",
@@ -43,7 +43,7 @@ const TalkInfoCard = ({ className, variant, talk, ...props }: Props) => {
             <div
               className={clsx(
                 "tw:-mt-1 tw:rounded-lg tw:border tw:px-1.5 tw:py-1 tw:text-xs tw:uppercase",
-                variant === "Non-talk" &&
+                variant === "Non-Talk" &&
                   "tw:border-rose-500 tw:bg-rose-100 tw:text-rose-700",
                 variant === "Talk" &&
                   "tw:border-indigo-500 tw:bg-indigo-100 tw:text-indigo-700",
@@ -60,7 +60,7 @@ const TalkInfoCard = ({ className, variant, talk, ...props }: Props) => {
         <div
           className={clsx(
             "tw:text-sm",
-            variant === "Non-talk" && "tw:text-rose-600",
+            variant === "Non-Talk" && "tw:text-rose-600",
             variant === "Talk" && "tw:text-indigo-600",
             variant === "Workshop" && "tw:text-purple-600",
             variant === "Sprint" && "tw:text-pink-600",
@@ -71,7 +71,7 @@ const TalkInfoCard = ({ className, variant, talk, ...props }: Props) => {
         <div
           className={clsx(
             "tw:text-sm",
-            variant === "Non-talk" && "tw:text-rose-400",
+            variant === "Non-Talk" && "tw:text-rose-400",
             variant === "Talk" && "tw:text-indigo-400",
             variant === "Workshop" && "tw:text-purple-400",
             variant === "Sprint" && "tw:text-pink-400",
@@ -83,7 +83,7 @@ const TalkInfoCard = ({ className, variant, talk, ...props }: Props) => {
           <div
             className={clsx(
               "tw:mt-2 tw:line-clamp-3 tw:tablet:mt-4",
-              variant === "Non-talk" && "tw:text-rose-700",
+              variant === "Non-Talk" && "tw:text-rose-700",
               variant === "Talk" && "tw:text-indigo-700",
               variant === "Workshop" && "tw:text-purple-700",
               variant === "Sprint" && "tw:text-pink-700",

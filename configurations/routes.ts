@@ -12,6 +12,11 @@ const routes: Route[] = [
     disabled: false,
   },
   {
+    path: "/program",
+    name: "Program",
+    disabled: false,
+  },
+  {
     path: "/venue",
     name: "Venue",
     disabled: false,

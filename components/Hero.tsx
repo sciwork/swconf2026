@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import NextLink from "next/link";
 import { useEffect, useState } from "react";
 import {
   faDiscord,
@@ -79,15 +80,18 @@ const Hero = () => {
                     NTUT Pioneer International R&D Building, Room 402 & 403
                   </p>
                   <p className="tw:text-base tw:leading-7 tw:tablet:text-lg">
-                    The call for proposals closed on September 16. Proposal
-                    review runs from September 17 to October 8.
-                  </p>
-                  <p className="tw:text-base tw:leading-7 tw:tablet:text-lg">
-                    Early-bird, student, and corporate tickets go on sale on
-                    October 1.
+                    The program is now available! This year features 9 talks and
+                    1 workshop. See the{" "}
+                    <NextLink
+                      className="tw:font-semibold tw:text-rose-600 tw:underline tw:hover:text-rose-800"
+                      href="/program"
+                    >
+                      program page
+                    </NextLink>{" "}
+                    for details.
                   </p>
                   <p className="tw:font-yk tw:text-base tw:font-semibold tw:tracking-[0.08em] tw:text-orange-500 tw:uppercase tw:tablet:text-lg">
-                    The final program will be confirmed on November 1
+                    Regular and group tickets are now on sale
                   </p>
                 </div>
               </div>
