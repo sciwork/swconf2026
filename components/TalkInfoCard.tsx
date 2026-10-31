@@ -17,11 +17,11 @@ const TalkInfoCard = ({ className, variant, talk, ...props }: Props) => {
   return (
     <div
       className={clsx(
-        "tw:rounded-3xl tw:bg-gradient-to-b tw:p-8 tw:tablet:rounded-2xl",
-        variant === "Non-Talk" && "tw:from-red-200 tw:to-red-100",
-        variant === "Talk" && "tw:from-indigo-200 tw:to-indigo-100",
-        variant === "Workshop" && "tw:from-purple-200 tw:to-purple-100",
-        variant === "Sprint" && "tw:from-pink-200 tw:to-pink-100",
+        "tw:rounded-3xl tw:p-8 tw:tablet:rounded-2xl",
+        variant === "Non-Talk" && "tw:bg-stone-100",
+        variant === "Talk" && "tw:bg-orange-100",
+        variant === "Workshop" && "tw:bg-sky-100",
+        variant === "Sprint" && "tw:bg-rose-100",
         className,
       )}
       {...props}
@@ -31,10 +31,10 @@ const TalkInfoCard = ({ className, variant, talk, ...props }: Props) => {
           <div
             className={clsx(
               "tw:font-yk tw:text-2xl tw:font-medium",
-              variant === "Non-Talk" && "tw:text-rose-800",
-              variant === "Talk" && "tw:text-indigo-800",
-              variant === "Workshop" && "tw:text-purple-800",
-              variant === "Sprint" && "tw:text-pink-800",
+              variant === "Non-Talk" && "tw:text-stone-800",
+              variant === "Talk" && "tw:text-orange-800",
+              variant === "Workshop" && "tw:text-sky-800",
+              variant === "Sprint" && "tw:text-rose-800",
             )}
           >
             {talk.title}
@@ -44,13 +44,13 @@ const TalkInfoCard = ({ className, variant, talk, ...props }: Props) => {
               className={clsx(
                 "tw:-mt-1 tw:rounded-lg tw:border tw:px-1.5 tw:py-1 tw:text-xs tw:uppercase",
                 variant === "Non-Talk" &&
-                  "tw:border-rose-500 tw:bg-rose-100 tw:text-rose-700",
+                  "tw:border-stone-500 tw:bg-stone-50 tw:text-stone-700",
                 variant === "Talk" &&
-                  "tw:border-indigo-500 tw:bg-indigo-100 tw:text-indigo-700",
+                  "tw:border-orange-500 tw:bg-orange-50 tw:text-orange-700",
                 variant === "Workshop" &&
-                  "tw:border-purple-500 tw:bg-purple-100 tw:text-purple-700",
+                  "tw:border-sky-500 tw:bg-sky-50 tw:text-sky-700",
                 variant === "Sprint" &&
-                  "tw:border-pink-500 tw:bg-pink-100 tw:text-pink-700",
+                  "tw:border-rose-500 tw:bg-rose-50 tw:text-rose-700",
               )}
             >
               {talk.room}
@@ -60,10 +60,10 @@ const TalkInfoCard = ({ className, variant, talk, ...props }: Props) => {
         <div
           className={clsx(
             "tw:text-sm",
-            variant === "Non-Talk" && "tw:text-rose-600",
-            variant === "Talk" && "tw:text-indigo-600",
-            variant === "Workshop" && "tw:text-purple-600",
-            variant === "Sprint" && "tw:text-pink-600",
+            variant === "Non-Talk" && "tw:text-stone-600",
+            variant === "Talk" && "tw:text-orange-600",
+            variant === "Workshop" && "tw:text-sky-600",
+            variant === "Sprint" && "tw:text-rose-600",
           )}
         >
           {talk?.persons?.map((person) => person.publicName).join(", ")}
@@ -71,10 +71,10 @@ const TalkInfoCard = ({ className, variant, talk, ...props }: Props) => {
         <div
           className={clsx(
             "tw:text-sm",
-            variant === "Non-Talk" && "tw:text-rose-400",
-            variant === "Talk" && "tw:text-indigo-400",
-            variant === "Workshop" && "tw:text-purple-400",
-            variant === "Sprint" && "tw:text-pink-400",
+            variant === "Non-Talk" && "tw:text-stone-500",
+            variant === "Talk" && "tw:text-orange-500",
+            variant === "Workshop" && "tw:text-sky-500",
+            variant === "Sprint" && "tw:text-rose-500",
           )}
         >
           {talk.start.format("HH:mm")} - {talk.end.format("HH:mm")} ({durationInMinutes} min)
@@ -83,10 +83,10 @@ const TalkInfoCard = ({ className, variant, talk, ...props }: Props) => {
           <div
             className={clsx(
               "tw:mt-2 tw:line-clamp-3 tw:tablet:mt-4",
-              variant === "Non-Talk" && "tw:text-rose-700",
-              variant === "Talk" && "tw:text-indigo-700",
-              variant === "Workshop" && "tw:text-purple-700",
-              variant === "Sprint" && "tw:text-pink-700",
+              variant === "Non-Talk" && "tw:text-stone-700",
+              variant === "Talk" && "tw:text-orange-700",
+              variant === "Workshop" && "tw:text-sky-700",
+              variant === "Sprint" && "tw:text-rose-700",
             )}
           >
             {talk.abstract}
@@ -94,7 +94,12 @@ const TalkInfoCard = ({ className, variant, talk, ...props }: Props) => {
         )}
         {shouldShowMoreButton && (
           <div className="tw:mt-4">
-            <Button btnSize="small" to={talk.url} target="_blank">
+            <Button
+              variant={variant === "Workshop" ? "action" : "default"}
+              btnSize="small"
+              to={talk.url}
+              target="_blank"
+            >
               More
             </Button>
           </div>
