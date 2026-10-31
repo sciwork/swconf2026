@@ -8,6 +8,7 @@ import ToBeAnnounced from "@/components/ToBeAnnounced";
 import { DayType } from "@/models/Schedule";
 import { getSchedule } from "@/utils/apis";
 import dayjs from "@/utils/day";
+import { TIME_SLOT_DURATION_MINUTES } from "@/utils/schedule";
 
 const getCurrentDay = (
   days: DayType[],
@@ -55,7 +56,11 @@ const Program = () => {
       {days.length === 0 ? (
         <ToBeAnnounced />
       ) : (
-        <ScheduleComponent days={days} currentDay={currentDay} />
+        <ScheduleComponent
+          days={days}
+          currentDay={currentDay}
+          timeSlotMinutes={TIME_SLOT_DURATION_MINUTES}
+        />
       )}
     </Article>
   );

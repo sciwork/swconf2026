@@ -166,13 +166,13 @@ class Schedule {
         persons,
       } = talks;
       const [durationHour, durationMinute] = duration.split(":");
-      const startDate = dayjs(
-        `${dayjs(date).format("YYYY-MM-DD")}T${start}:00+08:00`,
-      );
+      // Take the calendar date straight from the string; converting through
+      // dayjs would shift it by the visitor's time zone (pretalx sends UTC)
+      const startDate = dayjs(`${date.substring(0, 10)}T${start}:00+08:00`);
       return {
         id,
         logo,
-        date: dayjs(date),
+        date: startDate,
         start: startDate,
         end: startDate
           .add(parseInt(durationHour), "hour")
