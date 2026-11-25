@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Image, { StaticImageData } from "next/image";
 import NextLink from "next/link";
-import defaultAvatarImg from "@/assets/default-avatar.svg";
+import logoImg from "@/assets/android-chrome-512x512.webp";
 
 type Props = {
   image?: StaticImageData;
@@ -17,9 +17,13 @@ const Avatar = ({ image, name, email }: Props) => {
           "drop-shadow-avatar": !!image,
         })}
       >
+        {/* A member without an image shows the complete sciwork logo. */}
         <Image
-          className="avatar-mask tw:h-60 tw:w-72 tw:object-cover"
-          src={image ?? defaultAvatarImg}
+          className={clsx("tw:h-72 tw:w-60", {
+            "avatar-mask tw:object-cover": !!image,
+            "tw:object-contain": !image,
+          })}
+          src={image ?? logoImg}
           alt="avatar"
         />
       </div>
